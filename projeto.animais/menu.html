@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PetStar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: #CDF7FB;
+      color: white;
+       font-family: 'Times New Roman', serif;
+        box-sizing: border-box;
+     
+    }
+
+    header {
+      background-color: #76BECE;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 0 10px #0000003b;
+      height: 240px;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-container img {
+      width: 150px;
+      height: 150px;
+      margin-right: 15px;
+      padding: 5px;
+      box-shadow: 0 0 15px #0000003b;
+      border-radius: 50%;
+    }
+
+    .titulo {
+      font-size: 55px;
+      margin-left: 55px;
+      font-family: 'Irish Grover', cursive;
+    }
+
+    .texto-mensagem {
+      margin-top: 10px;
+      font-size: 18px;
+      margin-left: 30px;
+    }
+
+    .social-perfil {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+      font-family: sans-serif;
+      margin-bottom: 115px;
+    }
+
+    .social-perfil img {
+      width: 35px;
+      border-radius: 50px;
+    }
+
+    .social-perfil .icones {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .social-perfil a {
+      color: black;
+      text-decoration: underline;
+      font-size: 12px;
+    }
+    p {
+        color: #FFFF;
+        font-size: 16px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        margin: 6px;
+    }
+    .cadastro-btn {
+  background-color: #EDFEFF;
+  color: #170C7B;
+  width: 60px;
+  height: 20px;
+  font-family: 'Impact', sans-serif;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none; /* tira a linha */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* sombreadinho top */
+  transition: all 0.3s ease;
+   text-align: center;
+   font-size: 30px;
+}
+
+.cadastro-btn:hover {
+  transform: scale(1.08); /* efeito ao passar o mouse */
+  background-color: #dffbff; /* leve mudança de cor */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25); /* sombra mais forte */
+}
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+      background-color: #95DCE5;
+      padding: 10px 0;
+      box-shadow: 0 0 10px #0000003b;
+    }
+
+    nav a {
+      font-family: Georgia, serif;
+      color: #170C7B;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 5px 10px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #0f084a;
+      text-decoration: underline;
+    }
+
+    nav a.ativo {
+      color: #0f084a;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .patas {
+      margin-left: 15px;
+    }
+ .container {
+      display: inline-flex;
+      flex-wrap: wrap;
+    
+      gap: 40px;
+      max-width: 60%;
+      margin: 20px;
+    }
+
+    .card {
+      background-color: #76C0D0;
+      color: white;
+      border-radius: 20px;
+      padding: 25px;
+      width: 400px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .card h2 {
+      font-family: 'Irish Grover', cursive;
+      font-size: 22px;
+      margin-bottom: 15px;
+      text-transform: lowercase;
+      letter-spacing: 1px;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+
+    .card img.small {
+      width: 250px;
+      margin: 15px auto 0;
+      display: block;
+    }
+
+    .horizontal {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
+/* Botões de perguntas */
+.perguntas {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.faq-button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  background-color: #ffb6c1;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.faq-button:hover {
+  background-color: #ff8fab;
+}
+
+
+.faq {
+  max-width: 90%;
+  margin: 80px auto;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  display: block;
+}
+
+.faq h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #2f3e46;
+}
+
+.faq details {
+  margin-bottom: 15px;
+  background: #fdfdfd;
+  padding: 15px 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.faq summary {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.faq p {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+
+
+    .faq {
+      background-color: #95DCE5;
+      padding: 40px 20px;
+      border-radius: 25px;
+      margin: 30px 20px;
+    }
+
+    .faq h3 {
+      color: #170C7B;
+      
+    }
+
+    .faq button {
+      background-color: #170C7B;
+      color: #76BECE;
+      border: none;
+      padding: 10px 20px;
+      margin: 10px 0;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .faq button:hover {
+      transform: scale(1.05);
+    }
+
+    .faq .resposta {
+      display: none;
+      background-color: white;
+      color: #444;
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    p{
+        color: #EDFEFF;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    h2{ 
+        background-color: #76BECE;
+        border-radius: 10px;
+        margin: 0%auto;
+        text-align: center;
+        font-size: 16px;
+        font-family: ;
+    }
+     .card{
+        background-color: #76C0D0;
+        border-radius: 35px;
+        width: 90%;
+        margin: 20px auto;
+        height: 300px;
+        display: block;
+        align-items: center;
+     }
+     .card1{
+      background-color: #76C0D0;
+        border-radius: 35px;
+        width: 90%;
+        margin: 20px auto;
+        height: 350px;
+        display: block;
+        align-items: center;
+     }
+     .card2{
+        background-color: #76C0D0;
+        border-radius: 35px;
+        width: 90%;
+        margin: 20px auto;
+        height: 350px;
+        display: block;
+        align-items: center;
+     }
+     .img{
+         max-width: 350px;
+        align-items: center;
+        margin: 0%auto;
+        border-radius: 40px;
+        display: block;
+        max-height: 200px;
+     }
+     .img1{
+        max-width: 200px;
+        align-items: center;
+        margin: 0%auto;
+        border-radius: 40px;
+        display: block;
+     }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="pata.png.jpg" alt="Logo PetStar">
+      <div>
+        <div class="titulo">PetStar <span class="patas">🐾</span></div>
+        <div class="texto-mensagem">
+          Ajude os animais também a terem uma qualidade de vida melhor.<br>
+          Todas as patinhas desse mundo merecem uma família!
+        </div>
+        <div style="font-size: 15px; margin-top: 10px; margin-left: 50px;">denunciem maus-tratos a todos os animais: maltratar animais também é um crime.</div>
+      </div>
+    </div>
+    <div class="social-perfil">
+      <div class="icones">
+        <img src="perfil.png" alt="Perfil">
+        <a href="cadastro.html" class="cadastro-btn">Cadastro</a>
+
+      </div>
+      <p> siga-nos nas redes sociais </p>
+      <a href="https://www.instagram.com" target="_blank">@petstar_ong</a>
+      <a href="https://www.tiktok.com" target="_blank">@PetStar_3ong</a>
+    </div>
+  </header>
+
+  <nav>
+    <a href="menu.html" class="ativo">Página principal</a>
+    <a href="adote.html">adote</a>
+    <a href="relatos.html">relatos&resgates</a>
+    <a href="sobre.html">sobre nós</a>
+    <a href="doe.html">doe agora</a>
+  </nav>
+  <h2> nós estamos por todo Brasil pela vida animal 🐾⭐</h2>
+    
+    <!-- COLUNA 1 -->
+    <div class="coluna">
+      <div class="card">
+        <h2>onde atuamos 🌍</h2>
+        <p>nós atuamos em todo o Brasil, a PetStar busca o bem dos nossos bichinhos em todo o país, temos vários abrigos, lugares nas cidades onde podemos ajudar cães e gatos que precisam de nós, temos várias parcerias também, e a nossa empresa providencia comida e água nas ruas para nossos animais.</p>
+      <img class="img1" src="mapa1.png.jpg" alt="Bazar Solidário">
+      </div>
+    </div>
+    <div class="coluna">
+      <div class="card1">
+        <h2>denuncias sobre maus-tratos</h2>
+        <p>não existe nada mais cruel do que machucar um bichinho inocente, por segurança, nós também preparamos sempre uma ficha antes de doar um animalzinho, a pena para maus-tratos animais é 10 anos sem fiança, então denunciem pessoas que têm a coragem de matar, bater e outras coisas até piores, e vamos vencer a maldade juntos.</p>
+       
+        <img class="img" src="pet.png" alt="Cartaz contra maus-tratos">
+    </div>
+    </div>
+    <div class="coluna">
+<div class="card2">
+        <h2>eventos PetStar</h2>
+        <p>Nós também realizamos eventos para arrecadar dinheiro, e investir em cuidados, bem materiais em nossos abrigos;<br><br>
+        nós realizamos bazares de roupas e sapatos, onde você também pode ajudar, para mais informações sobre o nosso bazar, postamos nas nossas redes sociais como instagram, tik tok e facebook.</p>
+    
+      <img class="img" src="bazar.png.jpg" alt="Mapa com coração">
+    </div>
+</div>
+  
+
+
+
+ <section class="info-section">
+
+
+  <section class="faq">
+    <h3>Dúvidas frequentes</h3>
+    <button onclick="toggleResposta('r1')">🐶 Como faço para adotar um animalzinho?</button>
+    <div id="r1" class="resposta"> você pode entrar em contato conosco por WhatsApp pra nos contatar que você quer adotar um pet, ou ir direto em um dos nossos abrigos, e depois que escolher o pet que você quer adotar preecher um formulario que será entregue no local ja. </div>
+
+    <button onclick="toggleResposta('r2')">📍 Posso ajudar mesmo morando longe?</button>
+    <div id="r2" class="resposta">Claro! Você pode doar, divulgar nosso trabalho ou se tornar um voluntário online. Toda ajuda é bem-vinda!</div>
+
+    <button onclick="toggleResposta('r3')">🎁 qual é a importancia da castração?</button>
+    <div id="r3" class="resposta">A castração é fundamental para o controle populacional de animais, evitando o abandono e a superpopulação. Ela previne diversas doenças, como infecções uterinas e câncer. Além disso, reduz comportamentos agressivos e de fuga. É um ato de amor e cuidado que melhora a qualidade de vida dos pets.
+.</div>
+  </section>
+
+  <script>
+    function toggleResposta(id) {
+      const div = document.getElementById(id);
+      div.style.display = div.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
+
+    
+</section>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro - PetStar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Irish Grover', cursive;
+      background-color: #CDF7FB;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .cadastro-container {
+      background: #EDFEFF;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .cadastro-container h1 {
+      color: #170C7B;
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+
+    .botao-cadastrar {
+      width: 100%;
+      padding: 12px;
+      background-color: #76BECE;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      font-family: Impact, sans-serif;
+      margin-top: 10px;
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .botao-social {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      font-family: Impact, sans-serif;
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .google {
+      background-color: #DB4437;
+      color: white;
+    }
+
+    .facebook {
+      background-color: #4267B2;
+      color: white;
+    }
+
+    .botao-cadastrar:hover,
+    .botao-social:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <div class="cadastro-container">
+    <h1>Cadastrar</h1>
+    <form>
+      <input type="text" placeholder="Nome completo" required>
+      <input type="email" placeholder="E-mail" required>
+      <input type="password" placeholder="Senha" required>
+      <input type="password" placeholder="Confirmar senha" required>
+      <button type="submit" class="botao-cadastrar">Cadastrar</button>
+    </form>
+    <button class="botao-social google">Entrar com Google</button>
+    <button class="botao-social facebook">Entrar com Facebook</button>
+  </div>
+</body>
+</html>

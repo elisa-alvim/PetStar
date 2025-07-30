@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adote - PetStar</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #CDF7FB;
+      font-family: 'Irish Grover', cursive;
+      color: white;
+    }
+    header {
+      background-color: #76BECE;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 0 10px #0000003b;
+      height: 240px;
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+    .logo-container img {
+      width: 150px;
+      height: 150px;
+      margin-right: 15px;
+      padding: 5px;
+      box-shadow: 0 0 15px #0000003b;
+      border-radius: 50%;
+    }
+    .titulo {
+      font-size: 55px;
+      margin-left: 55px;
+    }
+    .texto-mensagem {
+      margin-top: 10px;
+      font-size: 18px;
+      margin-left: 30px;
+    }
+    .social-perfil {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+      font-family: sans-serif;
+      margin-bottom: 115px;
+    }
+    .social-perfil img {
+      width: 35px;
+      border-radius: 50px;
+    }
+    .social-perfil .icones {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .social-perfil a {
+      color: black;
+      text-decoration: underline;
+      font-size: 12px;
+    }
+    p {
+      color: #FFFF;
+      font-size: 16px;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      margin: 6px;
+    }
+    .cadastro-btn {
+      background-color: #EDFEFF;
+      color: #170C7B;
+      width: 60px;
+      height: 20px;
+      font-family: 'Impact', sans-serif;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      text-align: center;
+      font-size: 30px;
+    }
+    .cadastro-btn:hover {
+      transform: scale(1.08);
+      background-color: #dffbff;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    }
+    nav {
+      display: flex;
+      justify-content: space-around;
+      background-color: #95DCE5;
+      padding: 10px 0;
+      box-shadow: 0 0 10px #0000003b;
+    }
+    nav a {
+      font-family: Georgia, serif;
+      color: #170C7B;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 5px 10px;
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      color: #0f084a;
+      text-decoration: underline;
+    }
+    nav a.ativo {
+      color: #0f084a;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    .patas {
+      margin-left: 15px;
+    }
+    .impact-section {
+      background: linear-gradient(to bottom, #e0f7ff, #ffffff);
+      padding: 50px 20px;
+      font-family: 'Segoe UI', sans-serif;
+      color: #333;
+    }
+    .adote {
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .titulo-adote {
+      font-size: 2rem;
+      text-align: center;
+      color: #1c4e80;
+      margin-bottom: 10px;
+    }
+    .texto-anuncio {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 40px;
+    }
+    .grid-animais {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
+    }
+    .card {
+      background: #f9f9ff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+      text-align: center;
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card h3 {
+      margin: 10px 0 5px;
+      color: #1a237e;
+    }
+    .card p {
+      color: #666;
+      margin-bottom: 10px;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="pata.png.jpg" alt="Logo PetStar" />
+      <div>
+        <div class="titulo">PetStar <span class="patas">🐾</span></div>
+        <div class="texto-mensagem">
+          Ajude os animais também a terem uma qualidade de vida melhor.<br />
+          Todas as patinhas desse mundo merecem uma família!
+        </div>
+        <div style="font-size: 15px; margin-top: 10px; margin-left: 50px;">
+          Denunciem maus-tratos a todos os animais: maltratar animais também é um crime.<br>
+          📞 Atendimento: (61) 99999-9999
+        </div>
+      </div>
+    </div>
+    <div class="social-perfil">
+      <div class="icones">
+        <img src="perfil.png" alt="Perfil" />
+        <a href="cadastro.html" class="cadastro-btn">Cadastro</a>
+      </div>
+      <p>siga-nos nas redes sociais</p>
+      <a href="https://www.instagram.com" target="_blank">@petstar_ong</a>
+      <a href="https://www.tiktok.com" target="_blank">@PetStar_3ong</a>
+    </div>
+  </header>
+  <nav>
+    <a href="menu.html">Página principal</a>
+    <a href="adote.html" class="ativo">adote</a>
+    <a href="relatos.html">relatos&resgates</a>
+    <a href="sobre.html">sobre nós</a>
+    <a href="doe.html">doe agora</a>
+  </nav>
+  <section class="impact-section">
+    <main class="adote">
+      <h1 class="titulo-adote">🐾 Encontre seu novo melhor amigo!</h1>
+      <p class="texto-anuncio">
+        Temos vários animais lindos esperando por um lar! A maioria está aqui na nossa cidade, mas também temos parcerias com ONGs de outras regiões. Você pode visitar nossos abrigos para conhecer mais! 🏡
+      </p>
+      <p class="texto-anuncio">
+        Se você se interessou por algum dos nossos pets e ele está na sua cidade, é possível fazer uma reserva entrando em contato conosco via WhatsApp! Nosso atendimento é imediato: (61) 99999-9999. Após reservar, você tem até 1 semana para finalizar a adoção e assinar nossa ficha.
+      </p>
+      <section class="grid-animais">
+        <div class="card">
+          <img src="mel.jpg" alt="Cachorro 1" />
+          <h3>Mel - São Paulo</h3>
+          <p>Raça: Vira-lata caramelo</p>
+        </div>
+        <div class="card">
+          <img src="lua.jpg" alt="Gato 1" />
+          <h3>Lua - Campinas</h3>
+          <p>Raça: Siamês</p>
+        </div>
+        <div class="card">
+          <img src="thor.jpg" alt="Cachorro 2" />
+          <h3>Thor - Ribeirão Preto</h3>
+          <p>Raça: Golden Retriever</p>
+        </div>
+        <div class="card">
+          <img src="max.jpg" alt="Husky" />
+          <h3>Max - São Paulo</h3>
+          <p>Raça: Husky Siberiano</p>
+        </div>
+        <div class="card">
+          <img src="nina.jpg" alt="Gato Maine Coon" />
+          <h3>Nina - Brasília</h3>
+          <p>Raça: Maine Coon</p>
+        </div>
+        <div class="card">
+          <img src="lola.jpg" alt="Dog 3" />
+          <h3>Lola - Brasília</h3>
+          <p>Raça: Border Collie</p>
+        </div>
+        <div class="card">
+          <img src="tom.jpg" alt="Gato 2" />
+          <h3>Tom - Brasília</h3>
+          <p>Raça: Persa</p>
+        </div>
+        <div class="card">
+          <img src="rex.jpg" alt="Dog 4" />
+          <h3>Rex - Goiânia</h3>
+          <p>Raça: Pastor Alemão</p>
+        </div>
+        <div class="card">
+          <img src="amora.jpg" alt="Gato 3" />
+          <h3>Amora - Salvador</h3>
+          <p>Raça: Angorá</p>
+        </div>
+      </section>
+    </main>
+  </section>
+</body>
+</html>

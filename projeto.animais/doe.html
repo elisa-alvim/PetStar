@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PetStar - Doe Agora</title>
+  <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: #CDF7FB;
+      font-family: 'Irish Grover', cursive;
+      color: white;
+    }
+
+    header {
+      background-color: #76BECE;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 0 10px #0000003b;
+      height: 240px;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-container img {
+      width: 150px;
+      height: 150px;
+      margin-right: 15px;
+      padding: 5px;
+      box-shadow: 0 0 15px #0000003b;
+      border-radius: 50%;
+    }
+
+    .titulo {
+      font-size: 55px;
+      margin-left: 55px;
+    }
+
+    .texto-mensagem {
+      margin-top: 10px;
+      font-size: 18px;
+      margin-left: 30px;
+    }
+
+    .social-perfil {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+      font-family: sans-serif;
+      margin-bottom: 115px;
+    }
+
+    .social-perfil img {
+      width: 35px;
+      border-radius: 50px;
+    }
+
+    .social-perfil .icones {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .social-perfil a {
+      color: black;
+      text-decoration: underline;
+      font-size: 12px;
+    }
+
+    p {
+      color: #FFFF;
+      font-size: 16px;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      margin: 6px;
+    }
+
+    .cadastro-btn {
+      background-color: #EDFEFF;
+      color: #170C7B;
+      width: 60px;
+      height: 20px;
+      font-family: 'Impact', sans-serif;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      text-align: center;
+      font-size: 30px;
+    }
+
+    .cadastro-btn:hover {
+      transform: scale(1.08);
+      background-color: #dffbff;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+      background-color: #95DCE5;
+      padding: 10px 0;
+      box-shadow: 0 0 10px #0000003b;
+    }
+
+    nav a {
+      font-family: Georgia, serif;
+      color: #170C7B;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 5px 10px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #0f084a;
+      text-decoration: underline;
+    }
+
+    nav a.ativo {
+      color: #0f084a;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .patas {
+      margin-left: 15px;
+    }
+
+    .doe-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 50px auto;
+      text-align: center;
+      color: #170C7B;
+    }
+
+    .doe-section h2 {
+      font-size: 45px;
+      color: #170C7B;
+      margin-bottom: 20px;
+    }
+
+    .doe-section p {
+      font-size: 20px;
+      font-family: 'Times New Roman', serif;
+      max-width: 700px;
+      margin: 10px auto;
+      color: #170C7B;
+    }
+
+    .botao-doar {
+      background-color: #76C0D0;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      font-size: 22px;
+      font-family: 'Irish Grover', cursive;
+      border-radius: 25px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: 0.3s;
+    }
+
+    .botao-doar:hover {
+      background-color: #5fb3c3;
+      transform: scale(1.05);
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .modal-conteudo {
+      background-color: #76C0D0;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      color: white;
+      width: 350px;
+    }
+
+    .modal-conteudo img {
+      width: 200px;
+      margin: 10px 0;
+    }
+
+    .fechar {
+      background-color: white;
+      color: #170C7B;
+      font-weight: bold;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="pata.png.jpg" alt="Logo PetStar">
+      <div>
+        <div class="titulo">PetStar <span class="patas">🐾</span></div>
+        <div class="texto-mensagem">
+          Ajude os animais também a terem uma qualidade de vida melhor.<br>
+          Todas as patinhas desse mundo merecem uma família!
+        </div>
+        <div style="font-size: 15px; margin-top: 10px; margin-left: 50px;">denunciem maus-tratos a todos os animais: maltratar animais também é um crime.</div>
+      </div>
+    </div>
+    <div class="social-perfil">
+      <div class="icones">
+        <img src="perfil.png" alt="Perfil">
+        <a href="cadastro.html" class="cadastro-btn">Cadastro</a>
+      </div>
+      <p>siga-nos nas redes sociais</p>
+      <a href="https://www.instagram.com" target="_blank">@petstar_ong</a>
+      <a href="https://www.tiktok.com" target="_blank">@PetStar_3ong</a>
+    </div>
+  </header>
+
+  <nav>
+    <a href="menu.html">Página principal</a>
+    <a href="adote.html">adote</a>
+    <a href="relatos.html">relatos&resgates</a>
+    <a href="sobre.html">sobre nós</a>
+    <a href="doe.html" class="ativo">doe agora</a>
+  </nav>
+
+  <section class="doe-section">
+    <h2>Ajude a transformar vidas!</h2>
+    <p>Cada contribuição faz a diferença na vida de centenas de patinhas resgatadas. Sua doação pode oferecer alimento, cuidados veterinários, abrigo e muito amor!</p>
+    <p>Escolha a forma que preferir e doe com carinho 💙</p>
+    <button class="botao-doar" onclick="document.getElementById('modalDoacao').style.display='flex'">Quero ajudar agora!</button>
+  </section>
+
+  <div class="modal" id="modalDoacao">
+    <div class="modal-conteudo">
+      <h3>Doe por PIX</h3>
+      <p>Chave: doepetstar@gmail.com</p>
+      <img src="qrcode.png" alt="QR Code PIX">
+      <h4>Cartão de crédito ou boleto?</h4>
+      <p>Envie um e-mail para <b>financeiro@petstar.org</b> e receba nosso link seguro 💳</p>
+      <button class="fechar" onclick="document.getElementById('modalDoacao').style.display='none'">Fechar</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #CDF7FB;
+            font-family: 'Irish Grover', cursive;
+            color: white;
+        }
+
+        header {
+            background-color: #76BECE;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 0 10px #0000003b;
+            height: 240px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            width: 150px;
+            height: 150px;
+            margin-right: 15px;
+            padding: 5px;
+            box-shadow: 0 0 15px #0000003b;
+            border-radius: 50%;
+        }
+
+        .titulo {
+            font-size: 55px;
+            margin-left: 55px;
+        }
+
+        .texto-mensagem {
+            margin-top: 10px;
+            font-size: 18px;
+            margin-left: 30px;
+        }
+
+        .social-perfil {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+            font-family: sans-serif;
+            margin-bottom: 115px;
+        }
+
+        .social-perfil img {
+            width: 35px;
+            border-radius: 50px;
+        }
+
+        .social-perfil .icones {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .social-perfil a {
+            color: black;
+            text-decoration: underline;
+            font-size: 12px;
+        }
+
+        p {
+            color: #FFFF;
+            font-size: 16px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            margin: 6px;
+        }
+
+        .cadastro-btn {
+            background-color: #EDFEFF;
+            color: #170C7B;
+            width: 60px;
+            height: 20px;
+            font-family: 'Impact', sans-serif;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .cadastro-btn:hover {
+            transform: scale(1.08);
+            background-color: #dffbff;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #95DCE5;
+            padding: 10px 0;
+            box-shadow: 0 0 10px #0000003b;
+        }
+
+        nav a {
+            font-family: Georgia, serif;
+            color: #170C7B;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 5px 10px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #0f084a;
+            text-decoration: underline;
+        }
+
+        nav a.ativo {
+            color: #0f084a;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .patas {
+            margin-left: 15px;
+        }
+
+        .subtitulo {
+            background-color: #95DCE5;
+            padding: 20px;
+            font-size: 26px;
+            color: #170C7B;
+            font-family: 'Irish Grover', cursive;
+            margin: 0;
+        }
+
+        .card {
+            display: flex;
+            align-items: center;
+            background-color: #95DCE5;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            color: #170C7B;
+        }
+
+        .card img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .card-text {
+            font-family: 'Times New Roman', serif;
+        }
+
+        .card-text h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .card-extra {
+            background-color: #95DCE5;
+            color: #170C7B;
+            font-family: 'Times New Roman', serif;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="pata.png.jpg" alt="Logo PetStar">
+            <div>
+                <div class="titulo">PetStar <span class="patas">🐾</span></div>
+                <div class="texto-mensagem">
+                    Ajude os animais também a terem uma qualidade de vida melhor.<br>
+                    Todas as patinhas desse mundo merecem uma família!
+                </div>
+                <div style="font-size: 15px; margin-top: 10px; margin-left: 50px;">denunciem maus-tratos a todos os animais: maltratar animais também é um crime.</div>
+            </div>
+        </div>
+        <div class="social-perfil">
+            <div class="icones">
+                <img src="perfil.png" alt="Perfil">
+                <a href="cadastro.html" class="cadastro-btn">Cadastro</a>
+            </div>
+            <p> siga-nos nas redes sociais </p>
+            <a href="https://www.instagram.com" target="_blank">@petstar_ong</a>
+            <a href="https://www.tiktok.com" target="_blank">@PetStar_3ong</a>
+        </div>
+    </header>
+
+    <nav>
+        <a href="menu.html" >Página principal</a>
+        <a href="adote.html">adote</a>
+        <a href="relatos.html">relatos&resgates</a>
+        <a href="sobre.html" class="ativo">sobre nós</a>
+        <a href="doe.html">doe agora</a>
+    </nav>
+
+    <h2 class="subtitulo">você conhece a nossa empresa PetStar?</h2>
+
+    <div class="card">
+        <img src="ong.png" alt="Imagem ONG">
+        <div class="card-text">
+            <h3>o que somos? qual é o nosso objetivo?</h3>
+            <p>nossa empresa propõe ajudar aqueles que não tem voz, queremos salvar a vida desses bichinhos que também sentem dor, e tristeza, nas ruas estão cheias de cães e gatos que passam fome, são mau-tratados, e sem contar que como eles não são adestrados acabam atacando outras pessoas nas ruas, e mesmo sem ter culpa, acabam sendo mortos por conta disso, queremos acabar com isso no mundo.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="ong1.png" alt="Imagem Atendimento">
+        <div class="card-text">
+            <h3>como funciona o atendimento? e como podemos ajudar?</h3>
+            <p>a PetStar está em todo o Brasil, temos vários abrigos e parcerias, atendimento para adoção entre em contato conosco de 07h as 19:30 por e-mail, Instagram ou WhatsApp, e venha em uma de nossas empresas da PetStar e procure o cãozinho ou gatinho que você queira adotar, você também pode nos ajudar com doações aqui mesmo pelo nosso site, ou participando de eventos da PetStar.</p>
+        </div>
+    </div>
+
+    <div class="card-extra">
+        <h3>extra:</h3>
+        <p>nós também pretendemos educar e a ensinar crianças e jovens sobre a importância de cuidar e tratar bem os animais, e a nunca machucar nenhum, todo ano nos passamos em escolinhas e universidades pra fazer palestras e pra mostrar de forma divertida também, que os animais são bichinhos que precisam da nossa ajuda.</p>
+    </div>
+</body>
+</html>

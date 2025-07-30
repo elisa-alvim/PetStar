@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relatos e Resgates - PetStar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: #CDF7FB;
+      font-family: 'Irish Grover', cursive;
+      color: white;
+    }
+
+    header {
+      background-color: #76BECE;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 0 10px #0000003b;
+      height: 240px;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-container img {
+      width: 150px;
+      height: 150px;
+      margin-right: 15px;
+      padding: 5px;
+      box-shadow: 0 0 15px #0000003b;
+      border-radius: 50%;
+    }
+
+    .titulo {
+      font-size: 55px;
+      margin-left: 55px;
+    }
+
+    .texto-mensagem {
+      margin-top: 10px;
+      font-size: 18px;
+      margin-left: 30px;
+    }
+
+    .social-perfil {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+      font-family: sans-serif;
+      margin-bottom: 115px;
+    }
+
+    .social-perfil img {
+      width: 35px;
+      border-radius: 50px;
+    }
+
+    .social-perfil .icones {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .social-perfil a {
+      color: black;
+      text-decoration: underline;
+      font-size: 12px;
+    }
+
+    .cadastro-btn {
+      background-color: #EDFEFF;
+      color: #170C7B;
+      width: 60px;
+      height: 20px;
+      font-family: 'Impact', sans-serif;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      text-align: center;
+      font-size: 30px;
+    }
+
+    .cadastro-btn:hover {
+      transform: scale(1.08);
+      background-color: #dffbff;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+      background-color: #95DCE5;
+      padding: 10px 0;
+      box-shadow: 0 0 10px #0000003b;
+    }
+
+    nav a {
+      font-family: Georgia, serif;
+      color: #170C7B;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 5px 10px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #0f084a;
+      text-decoration: underline;
+    }
+
+    nav a.ativo {
+      color: #0f084a;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .patas {
+      margin-left: 15px;
+    }
+
+    .subtitulo {
+      background-color: #76BECE;
+      color: white;
+      text-align: center;
+      font-size: 26px;
+      margin: 40px auto 20px;
+      padding: 10px 20px;
+      border-radius: 15px;
+      width: 60%;
+    }
+
+    .card {
+      display: flex;
+      background-color: rgba(255, 255, 255, 0.2);
+      border: 2px solid #3e9caf;
+      border-radius: 20px;
+      margin: 20px auto;
+      width: 80%;
+      padding: 15px;
+      gap: 20px;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      
+    }
+
+    .card img {
+      width: 200px;
+      border-radius: 15px;
+    }
+
+    .card p {
+      font-family: 'Times New Roman', serif;
+      font-size: 16px;
+      color: #170C7B;
+    }
+
+    .motivacional {
+      text-align: center;
+      font-size: 22px;
+      margin: 50px auto;
+      color: #063d4c;
+      font-family: Georgia, serif;
+      width: 70%;
+    }
+    p{
+        color: black;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="pata.png.jpg" alt="Logo PetStar">
+      <div>
+        <div class="titulo">PetStar <span class="patas">🐾</span></div>
+        <div class="texto-mensagem">
+          Ajude os animais também a terem uma qualidade de vida melhor.<br>
+          Todas as patinhas desse mundo merecem uma família!
+        </div>
+        <div style="font-size: 15px; margin-top: 10px; margin-left: 50px;">denunciem maus-tratos a todos os animais: maltratar animais também é um crime.</div>
+      </div>
+    </div>
+    <div class="social-perfil">
+      <div class="icones">
+        <img src="perfil.png" alt="Perfil">
+        <a href="cadastro.html" class="cadastro-btn">Cadastro</a>
+      </div>
+      <p> siga-nos nas redes sociais </p>
+      <a href="https://www.instagram.com" target="_blank">@petstar_ong</a>
+      <a href="https://www.tiktok.com" target="_blank">@PetStar_3ong</a>
+    </div>
+  </header>
+
+  <nav>
+    <a href="menu.html">Página principal</a>
+    <a href="adote.html">adote</a>
+    <a href="relatos.html" class="ativo">relatos&resgates</a>
+    <a href="sobre.html">sobre nós</a>
+    <a href="doe.html">doe agora</a>
+  </nav>
+
+  <div class="subtitulo">Histórias das vidas que salvamos</div>
+
+  <div class="card">
+    <img src="antes.png" alt="Chico">
+    <p>chico foi levado para nossa empresa nesse estado, foi um milagre ele ainda estar vivo, ele tinha machucados graves e foi preso com fita em um pedaço de madeira, no sol, infelizmente nao encontramos a pessoa que fez isso com ele, mas nos o tiramos de la, cuidamos das suas feridas, no inicio ele nem conseguia comer com medo, mas agora ele tem um lar, e esta saudavel e feliz, foi castrado, vacinado, e sobreviveu, graças aos profissionais que temos na nossa empresa.</p>
+  </div>
+
+  <div class="card">
+    <img src="gato.png" alt="Maia">
+    <p>encontramos maia desnutrida, com fome, com sede, estava tambem suja e com verme, tinha 3 aninhos, nos resgamos e a salvamos, ela foi adotada e está muito feliz com a sua nova familia.</p>
+  </div>
+
+  <div class="card">
+    <img src="dog3.png" alt="Snoop">
+    <p>snoop foi mau-tratado pelo seu ex dono que bebia todos os dias por 2 anos, uma vizinha o denunciou pela empresa PetStar e o homem foi detido, snoop passou por muitos traumas e demorou a confiar novamente nos humanos, mas encontrou sua família, e encontrou a felicidade tambem.</p>
+  </div>
+
+  <div class="card">
+    <img src="gato2.png" alt="Dora">
+    <p>dora foi encontrada proximo de um rio localizado em brasilia, com muitas doeças, vermes, e ainda tinha algumas marcas de maus-tratos, ela estava pedindo socorro, e mais uma vez graças aos nossos profissionais ela esta em otimo estado e foi adotada por uma familia linda.</p>
+  </div>
+
+  <div class="subtitulo">Animais adotados da PetStar</div>
+
+  <div class="card">
+    <img src="popó.jpg" alt="Luna">
+    <p>luna alvim adotada em 2023</p>
+  </div>
+
+  <div class="card">
+    <img src="gata.png.jpg" alt="Sofia">
+    <p>sofia adotada em 2025</p>
+  </div>
+
+  <div class="card">
+    <img src="pet2.png.jpg" alt="Rumia">
+    <p>rumia adotada em 2023</p>
+  </div>
+
+  <div class="card">
+    <img src="pet1.png.jpg" alt="Thor">
+    <p>thor adotado em 2022</p>
+  </div>
+
+  <div class="motivacional">
+    Doe para a PetStar e ajude a transformar dor em esperança, medo em amor e abandono em uma nova chance. 🌟
+  </div>
+
+</body>
+</html>
